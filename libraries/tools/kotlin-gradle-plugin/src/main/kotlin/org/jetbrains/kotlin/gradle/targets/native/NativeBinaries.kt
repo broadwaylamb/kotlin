@@ -73,7 +73,7 @@ sealed class NativeBinary(
 
     var binaryOptions: MutableMap<String, String> = mutableMapOf()
 
-    fun addBinaryOption(name: String, value: String) {
+    fun binaryOption(name: String, value: String) {
         // TODO: report if $name is unknown?
         binaryOptions[name] = value
     }

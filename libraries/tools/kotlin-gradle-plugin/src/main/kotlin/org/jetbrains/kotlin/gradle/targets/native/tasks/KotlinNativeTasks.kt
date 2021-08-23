@@ -642,7 +642,7 @@ constructor(
             addArg("-linker-option", it)
         }
         (projectWideBinaryOptions + binaryOptions).forEach { (name, value) ->
-            add("-Xbinary=$name=$value") // TODO: not actually tested yet.
+            add("-Xbinary=$name=$value")
         }
         exportLibraries.files.filterKlibsPassedToCompiler().forEach {
             add("-Xexport-library=${it.absolutePath}")
