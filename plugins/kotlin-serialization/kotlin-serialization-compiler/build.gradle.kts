@@ -51,8 +51,9 @@ sourcesJar()
 javadocJar()
 testsJar()
 
-projectTest(parallel = true) {
+projectTest(parallel = true, jUnit5Enabled = true) {
     workingDir = rootDir
+    useJUnitPlatform()
 }
 
 val generateTests by generator("org.jetbrains.kotlinx.serialization.TestGeneratorKt")
