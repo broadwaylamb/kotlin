@@ -28077,6 +28077,12 @@ public class DiagnosisCompilerTestFE10TestdataTestGenerated extends AbstractDiag
                 }
 
                 @Test
+                @TestMetadata("otherModuleInheritance_after.kt")
+                public void testOtherModuleInheritance_after() throws Exception {
+                    runTest("compiler/testData/diagnostics/tests/smartCasts/publicVals/otherModuleInheritance_after.kt");
+                }
+
+                @Test
                 @TestMetadata("protected.kt")
                 public void testProtected() throws Exception {
                     runTest("compiler/testData/diagnostics/tests/smartCasts/publicVals/protected.kt");
