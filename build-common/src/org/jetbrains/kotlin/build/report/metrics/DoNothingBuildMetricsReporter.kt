@@ -12,7 +12,7 @@ object DoNothingBuildMetricsReporter : BuildMetricsReporter {
     override fun endMeasure(time: BuildTime, endNs: Long) {
     }
 
-    override fun addTimeMetric(time: BuildTime, durationNs: Long) {
+    override fun addTimeMetric(time: BuildTime, durationMs: Long) {
     }
 
     override fun addMetric(metric: BuildPerformanceMetric, value: Long) {

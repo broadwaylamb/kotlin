@@ -9,14 +9,10 @@ import java.io.Serializable
 
 
 @Suppress("Reformat")
-enum class BuildPerformanceMetric(val parent: BuildPerformanceMetric? = null) : Serializable {
-    OUTPUT_SIZE,
-        LOOKUP_SIZE(OUTPUT_SIZE),
-        SNAPSHOT_SIZE(OUTPUT_SIZE),
-    PERFORMANCE_DATA,
-        COMPILER_INITIALIZATION(PERFORMANCE_DATA),
-        CODE_ANALYSIS(PERFORMANCE_DATA),
-        CODE_GENERATION(PERFORMANCE_DATA),
+enum class BuildPerformanceMetric(val parent: BuildPerformanceMetric? = null, val readableString: String) : Serializable {
+    OUTPUT_SIZE(readableString = "Total output size"),
+        LOOKUP_SIZE(OUTPUT_SIZE, "Lookups size"),
+        SNAPSHOT_SIZE(OUTPUT_SIZE, "ABI snapshot size"),
     ;
 
     companion object {

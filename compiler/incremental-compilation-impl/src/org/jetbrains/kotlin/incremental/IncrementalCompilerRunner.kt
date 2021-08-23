@@ -500,9 +500,9 @@ abstract class IncrementalCompilerRunner<
     protected fun reportPerformanceData(defaultPerformanceManager: CommonCompilerPerformanceManager) {
         defaultPerformanceManager.getMeasurementResults().forEach {
             when (it) {
-                is CompilerInitializationMeasurement -> reporter.addMetric(BuildPerformanceMetric.COMPILER_INITIALIZATION, it.milliseconds)
-                is CodeAnalysisMeasurement -> reporter.addMetric(BuildPerformanceMetric.CODE_ANALYSIS, it.milliseconds)
-                is CodeGenerationMeasurement -> reporter.addMetric(BuildPerformanceMetric.CODE_GENERATION, it.milliseconds)
+                is CompilerInitializationMeasurement -> reporter.addTimeMetric(BuildTime.COMPILER_INITIALIZATION, it.milliseconds)
+                is CodeAnalysisMeasurement -> reporter.addTimeMetric(BuildTime.CODE_ANALYSIS, it.milliseconds)
+                is CodeGenerationMeasurement -> reporter.addTimeMetric(BuildTime.CODE_GENERATION, it.milliseconds)
             }
         }
     }

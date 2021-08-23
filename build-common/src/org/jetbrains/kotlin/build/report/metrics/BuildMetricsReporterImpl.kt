@@ -29,8 +29,8 @@ class BuildMetricsReporterImpl : BuildMetricsReporter {
         myBuildTimes.add(time, durationMs)
     }
 
-    override fun addTimeMetric(time: BuildTime, durationNs: Long) {
-        myBuildTimes.add(time, durationNs)
+    override fun addTimeMetric(time: BuildTime, durationMs: Long) {
+        myBuildTimes.add(time, durationMs)
     }
 
     override fun addMetric(metric: BuildPerformanceMetric, value: Long) {
