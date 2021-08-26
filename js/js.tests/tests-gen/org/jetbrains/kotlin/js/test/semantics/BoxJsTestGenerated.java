@@ -290,6 +290,11 @@ public class BoxJsTestGenerated extends AbstractBoxJsTest {
             runTest("js/js.translator/testData/box/classObject/namedClassObject.kt");
         }
 
+        @TestMetadata("nestedObjectExport.kt")
+        public void testNestedObjectExport() throws Exception {
+            runTest("js/js.translator/testData/box/classObject/nestedObjectExport.kt");
+        }
+
         @TestMetadata("objectInCompanionObject.kt")
         public void testObjectInCompanionObject() throws Exception {
             runTest("js/js.translator/testData/box/classObject/objectInCompanionObject.kt");
